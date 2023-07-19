@@ -1,0 +1,14 @@
+@mixin ButtonStyle($primColor, $secondColor) {
+  background-color: $primColor;
+  color: $secondColor;
+  padding:5px;
+  border-radius:25px;
+  border: 1px solid $secondColor;
+}
+
+@mixin HotelCardStyle($color) {
+  border: 1px solid $color;
+  border-radius:25px;
+  margin:5px;
+  padding-bottom: 5px;
+}

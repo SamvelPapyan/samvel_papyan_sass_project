@@ -1,0 +1,3 @@
+@function getImage($start, $index) {
+  @return map-get($images, $start + _ + $index);
+}
