@@ -1,3 +1,7 @@
-@function getImage($start, $index) {
-  @return map-get($images, $start + _ + $index);
+@function getImage($image) {
+  @return map-get($images, $image);
+}
+
+@function getFont($font) {
+  @return map-get($fonts, $font);
 }

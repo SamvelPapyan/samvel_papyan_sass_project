@@ -8464,6 +8464,14 @@ readers do not read off random characters that represent icons */
   padding: 0;
 }
 
+.main, button {
+  font-family: "Rowdies";
+}
+
+button {
+  cursor: pointer;
+}
+
 .main {
   width: 95%;
   margin: auto;
@@ -8482,6 +8490,9 @@ readers do not read off random characters that represent icons */
   background-color: #fa6866;
   height: 80px;
   padding: 0 20px 0 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .navbar .menu-bar {
@@ -8504,7 +8515,16 @@ readers do not read off random characters that represent icons */
 
 .navbar .menu-bar ul li a {
   text-decoration: none;
-  color: blue;
+  color: white;
+}
+
+.navbar .download-app, .navbar .lang {
+  background-color: #fa6866;
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
+  margin: 0 10px;
 }
 
 .part-1 {
@@ -8516,6 +8536,9 @@ readers do not read off random characters that represent icons */
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-image: url("../images/barcelona-webpage.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .part-1 .row1 {
@@ -8523,13 +8546,13 @@ readers do not read off random characters that represent icons */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .part-1 .row1 .col1 {
-  width: 55%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8545,12 +8568,31 @@ readers do not read off random characters that represent icons */
           align-items: flex-start;
 }
 
-.part-1 .row1 .col2 {
-  width: 40%;
+.part-1 .row1 .col1 h1, .part-1 .row1 .col1 p {
+  font-family: "Rowdies";
+  color: white;
 }
 
-.part-1 .row1 .col2 img {
-  width: 100%;
+.part-1 .row1 .col1 h1 {
+  font-size: 60px;
+}
+
+.part-1 .row1 .col1 p {
+  font-size: 20px;
+}
+
+.part-1 .row1 .col1 .book-button {
+  background-color: transparent;
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
+  font-size: 1.5em;
+  padding: 0 20px;
+}
+
+.part-1 .row1 .col2 {
+  width: 40%;
 }
 
 .part-1 .row2 {
@@ -8580,8 +8622,10 @@ readers do not read off random characters that represent icons */
   width: 120px;
   padding: 10px 0 10px 0;
   text-align: center;
-  border: 1px solid #fa6866;
   border-radius: 25px;
+  border: 1px solid #fa6866;
+  background-color: white;
+  color: #fa6866;
   margin: 10px;
 }
 
@@ -8608,7 +8652,7 @@ readers do not read off random characters that represent icons */
 .part-2 .hotels .hotels__hotel-box {
   width: 300px;
   text-align: center;
-  border: 1px solid blue;
+  border: 1px solid #fa6866;
   border-radius: 25px;
   margin: 5px;
   padding-bottom: 5px;
@@ -8621,7 +8665,7 @@ readers do not read off random characters that represent icons */
 }
 
 .part-2 .hotels .hotels__hotel-box .claim-button {
-  background-color: blue;
+  background-color: #fa6866;
   color: white;
   padding: 5px;
   border-radius: 25px;
@@ -8633,8 +8677,19 @@ readers do not read off random characters that represent icons */
   text-align: center;
 }
 
+.part-2 .claim-row p {
+  color: #fa6866;
+  font-size: 1.5em;
+}
+
 .part-2 .claim-row .claim-button {
-  width: 150px;
+  background-color: #fa6866;
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
+  font-size: 1.5em;
+  padding: 5px 20px;
 }
 
 .bonus-part-1 h2 {
@@ -8669,7 +8724,7 @@ readers do not read off random characters that represent icons */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid blue;
+  border: 1px solid #fa6866;
   border-radius: 25px;
   margin: 5px;
   padding-bottom: 5px;
@@ -8682,7 +8737,7 @@ readers do not read off random characters that represent icons */
 }
 
 .bonus-part-1 .sales .sales__sale-box .claim-button {
-  background-color: blue;
+  background-color: #fa6866;
   color: white;
   padding: 5px;
   border-radius: 25px;
@@ -8693,9 +8748,9 @@ readers do not read off random characters that represent icons */
 
 .bonus-part-1 .sales .sales__sale-box .begins-at-midnight {
   background-color: white;
-  color: blue;
+  color: #fa6866;
   padding: 5px;
   border-radius: 25px;
-  border: 1px solid blue;
+  border: 1px solid #fa6866;
 }
 /*# sourceMappingURL=main.css.map */

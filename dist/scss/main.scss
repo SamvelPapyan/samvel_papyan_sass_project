@@ -9,6 +9,14 @@
   padding:0;
 }
 
+.main, button {
+  font-family: getFont(rowdies);
+}
+
+button {
+  cursor: pointer;
+}
+
 .main {
   width:95%;
   margin:auto;
@@ -21,6 +29,8 @@
   background-color: #fa6866;
   height: 80px;
   padding: 0 20px 0 20px;
+  position:sticky;
+  top:0;
 
   .menu-bar {
     display:flex;
@@ -32,10 +42,14 @@
         margin:5px;
         a {
           text-decoration:none;
-          color: blue;
+          color: white;
         }
       }
     }
+  }
+  .download-app, .lang {
+    @include ButtonStyle(#fa6866, white);
+    margin: 0 10px;
   }
 }
 
@@ -43,24 +57,41 @@
   width:100%;
   display: flex;
   flex-direction:column;
+  background-image: url(getImage(barcelona));
+  background-repeat: no-repeat;
+  background-size: cover;
   .row1 {
     height:300px;
     display:flex;
-    justify-content:space-evenly;
-
+    justify-content:center;
     .col1 {
-      width:55%;
+      width:50%;
       display:flex;
       flex-direction: column;
       justify-content:center;
       align-items:flex-start;
+
+      h1, p{
+        font-family: getFont(rowdies);
+        color: white;
+      }
+
+      h1 {
+        font-size:60px;
+      }
+
+      p {
+        font-size:20px;
+      }
+
+      .book-button {
+        @include ButtonStyle(transparent, white);
+        font-size: 1.5em;
+        padding:0 20px;
+      }
     }
     .col2 {
       width: 40%;
-
-      img {
-        width:100%;
-      }
     }
   }
   .row2 {
@@ -76,8 +107,10 @@
       width:120px;
       padding:10px 0 10px 0;
       text-align:center;
-      border: 1px solid #fa6866;
       border-radius:25px;
+      border:1px solid #fa6866;
+      background-color: white;
+      color: #fa6866;
       margin:10px;
       .service-icon {
         font-size:3em;
@@ -99,7 +132,7 @@
     .hotels__hotel-box {
       width: 300px;
       text-align: center;
-      @include HotelCardStyle(blue);
+      @include HotelCardStyle(#fa6866);
 
       .hotel-image {
         width:100%;
@@ -107,15 +140,21 @@
         border-radius: 25px 25px 0 0;
       }
       .claim-button {
-        @include ButtonStyle(blue, white);
+        @include ButtonStyle(#fa6866, white);
         width:100px;
       }
     }
   }
   .claim-row{
     text-align:center;
+    p {
+      color: #fa6866;
+      font-size:1.5em;
+    }
     .claim-button {
-      width:150px;
+      @include ButtonStyle(#fa6866, white);
+      font-size:1.5em;
+      padding: 5px 20px;
     }
   }
 }
@@ -137,7 +176,7 @@
       flex-direction: column;
       justify-content: center;
       align-items:center;
-      @include HotelCardStyle(blue);
+      @include HotelCardStyle(#fa6866);
 
       .sale-image {
         width:100%;
@@ -145,12 +184,12 @@
         border-radius: 25px 25px 0 0;
       }
       .claim-button {
-        @include ButtonStyle(blue, white);
+        @include ButtonStyle(#fa6866, white);
         display:block;
         width:100px;
       }
       .begins-at-midnight {
-        @include ButtonStyle(white, blue);
+        @include ButtonStyle(white, #fa6866);
       }
     }
   }
