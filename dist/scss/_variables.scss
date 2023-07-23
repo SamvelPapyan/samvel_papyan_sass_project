@@ -1,19 +1,27 @@
 $images: (
-  "hotel1": "images/hotel_1.jpeg",
-  "hotel2": "images/hotel_2.jpeg",
-  "hotel3": "images/hotel_3.jpeg",
-  "hotel4": "images/hotel_4.jpeg",
-  "hotel5": "images/hotel_5.jpeg",
-  "hotel6": "images/hotel_6.jpeg",
-  "sale1": "images/sale_1.jpg",
-  "sale2": "images/sale_2.jpg",
-  "sale3": "images/sale_3.jpg",
-  "sale4": "images/sale_4.jpg",
-  "sale5": "images/sale_5.jpg",
-  "sale6": "images/sale_6.jpg",
-  "barcelona": "../images/barcelona-webpage.jpeg"
+  "hotel1": "../images/hotel_1.jpeg",
+  "hotel2": "../images/hotel_2.jpeg",
+  "hotel3": "../images/hotel_3.jpeg",
+  "hotel4": "../images/hotel_4.jpeg",
+  "hotel5": "../images/hotel_5.jpeg",
+  "hotel6": "../images/hotel_6.jpeg",
+  "sale1": "../images/sale_1.jpg",
+  "sale2": "../images/sale_2.jpg",
+  "sale3": "../images/sale_3.jpg",
+  "sale4": "../images/sale_4.jpg",
+  "sale5": "../images/sale_5.jpg",
+  "sale6": "../images/sale_6.jpg",
+  "barcelona": "../images/barcelona-webpage.jpeg",
+  "resort1": "../images/resort-1.jpg",
+  "resort2": "../images/resort-2.jpg",
+  "resort3": "../images/resort-3.jpg"
 );
 
 $fonts: (
   "rowdies": "Rowdies"
+);
+
+$colors: (
+  "primaryColor": #fa6866,
+  "secondaryColor": white,
 );

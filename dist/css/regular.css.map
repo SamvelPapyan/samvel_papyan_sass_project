@@ -1,11 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA;;;;GAIG;AAIH,AAAA,KAAK,EAAE,KAAK,CAAC;EACX,yBAAwC,CAAuB,sBAAC;EAChE,iBAAgC,CAAe,uCAAC;CACjD;;AAED,UAAU;EACR,WAAW,EAAE,qBAAqB;EAClC,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,GAAG;EAChB,YAAY,EE8BY,KAAK;EF7B7B,GAAG,EAAE,wDAA4C,CAAC,eAAe,EAC/D,sDAA0C,CAAC,kBAAkB;;;AAGjE,AAAA,IAAI;AACJ,WAAW,CAAgB;EACzB,WAAW,EAAE,GAAG;CACjB",
-    "sources": [
-        "../scss/fontawesome/scss/regular.scss",
-        "../scss/fontawesome/scss/_functions.scss",
-        "../scss/fontawesome/scss/_variables.scss"
-    ],
-    "names": [],
-    "file": "regular.css"
-}
+{"version":3,"sources":["../scss/fontawesome/scss/regular.scss","regular.css","../scss/fontawesome/scss/_variables.scss"],"names":[],"mappings":"AAAA;;;;EAAA;AAQA;EACE,gDAAA;EACA,yDAAA;ACFF;;ADKA;EACE,kCAAA;EACA,kBAAA;EACA,gBAAA;EACA,mBE8BwB;EF7BxB,wJAAA;ACFF;ADMA;;EAEE,gBAAA;ACJF","file":"regular.css"}

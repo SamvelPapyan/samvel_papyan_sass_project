@@ -1,8 +1,13 @@
 @import "fontawesome/scss/fontawesome";
 @import "fontawesome/scss/solid";
+@import "fontawesome/scss/brands";
 @import 'variables';
 @import 'functions';
 @import 'mixins';
+
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin:0;
@@ -15,6 +20,7 @@
 
 button {
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 .main {
@@ -26,7 +32,7 @@ button {
   display:flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fa6866;
+  background-color: getColor(primaryColor);
   height: 80px;
   padding: 0 20px 0 20px;
   position:sticky;
@@ -42,14 +48,52 @@ button {
         margin:5px;
         a {
           text-decoration:none;
-          color: white;
+          color: getColor(secondaryColor);
+        }
+      }
+      .dropdown-toggle {
+        .dropdown {
+          background-color:white;
+          position: absolute;
+          display: none;
+          min-width:200px;
+          max-width:250px;
+          border-radius: 10px;
+          .dropdown-list {
+            li {
+              display: block;
+              padding:5px 2px;
+              border-radius:10px;
+              transition-duration: 0.3s;
+              a {
+                color: getColor(primaryColor);
+                transition-duration: 0.3s;
+              }
+              &:hover {
+                background-color: getColor(primaryColor);
+                a {
+                  color: getColor(secondaryColor);
+                }
+              }
+            }
+          }
+        }
+        &:hover {
+          .dropdown {
+            display: inline-block;
+          }
         }
       }
     }
   }
   .download-app, .lang {
-    @include ButtonStyle(#fa6866, white);
-    margin: 0 10px;
+    @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
+    margin: 4px 10px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    &:hover {
+      @include ButtonStyle(getColor(secondaryColor), getColor(primaryColor));
+    }
   }
 }
 
@@ -73,7 +117,7 @@ button {
 
       h1, p{
         font-family: getFont(rowdies);
-        color: white;
+        color: getColor(secondaryColor);
       }
 
       h1 {
@@ -82,12 +126,16 @@ button {
 
       p {
         font-size:20px;
+        margin-bottom: 20px;
       }
 
       .book-button {
-        @include ButtonStyle(transparent, white);
+        @include ButtonStyle(transparent, getColor(secondaryColor));
         font-size: 1.5em;
         padding:0 20px;
+        &:hover{
+          @include ChangeButtonColorsAndBorder(getColor(secondaryColor), getColor(primaryColor));
+        }
       }
     }
     .col2 {
@@ -107,19 +155,28 @@ button {
       width:120px;
       padding:10px 0 10px 0;
       text-align:center;
+      text-decoration: none;
       border-radius:25px;
-      border:1px solid #fa6866;
-      background-color: white;
-      color: #fa6866;
+      border:1px solid getColor(primaryColor);
+      background-color: getColor(secondaryColor);
+      color: getColor(primaryColor);
       margin:10px;
+      transition-duration: 0.3s;
       .service-icon {
         font-size:3em;
+      }
+
+      &:hover {
+        border:1px solid getColor(secondaryColor);
+        background-color: getColor(primaryColor);
+        color: getColor(secondaryColor);
       }
     }
   }
 }
 
 .part-2{
+  padding-top:80px;
   h2 {
     text-align:center;
   }
@@ -129,10 +186,10 @@ button {
     justify-content: center;
     flex-wrap: wrap;
 
-    .hotels__hotel-box {
+    &__hotel-box {
       width: 300px;
       text-align: center;
-      @include HotelCardStyle(#fa6866);
+      @include HotelCardStyle(getColor(primaryColor));
 
       .hotel-image {
         width:100%;
@@ -140,26 +197,34 @@ button {
         border-radius: 25px 25px 0 0;
       }
       .claim-button {
-        @include ButtonStyle(#fa6866, white);
+        @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
         width:100px;
+        flex: 1 0 30%;
+        &:hover {
+          @include ChangeButtonColorsAndBorder(getColor(secondaryColor), getColor(primaryColor));
+        }
       }
     }
   }
   .claim-row{
     text-align:center;
     p {
-      color: #fa6866;
+      color: getColor(primaryColor);
       font-size:1.5em;
     }
     .claim-button {
-      @include ButtonStyle(#fa6866, white);
-      font-size:1.5em;
+      @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
+      font-size:20px;
       padding: 5px 20px;
+      &:hover {
+        @include ChangeButtonColorsAndBorder(getColor(secondaryColor), getColor(primaryColor));
+      }
     }
   }
 }
 
 .bonus-part-1{
+  padding-top:80px;
   h2 {
     text-align:center;
   }
@@ -176,7 +241,7 @@ button {
       flex-direction: column;
       justify-content: center;
       align-items:center;
-      @include HotelCardStyle(#fa6866);
+      @include HotelCardStyle(getColor(primaryColor));
 
       .sale-image {
         width:100%;
@@ -184,13 +249,82 @@ button {
         border-radius: 25px 25px 0 0;
       }
       .claim-button {
-        @include ButtonStyle(#fa6866, white);
+        @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
         display:block;
         width:100px;
+        &:hover {
+          @include ChangeButtonColorsAndBorder(getColor(secondaryColor), getColor(primaryColor));
+        }
       }
       .begins-at-midnight {
-        @include ButtonStyle(white, #fa6866);
+        @include ButtonStyle(getColor(secondaryColor), getColor(primaryColor));
       }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  .row1 {
+    display:flex;
+    justify-content: space-evenly;
+    h3 {
+      color: getColor(primaryColor);
+      font-weight: 100;
+    }
+    ul {
+      list-style-type: none;
+    }
+    ul li a{
+      color: #a1a1a1;
+      text-decoration: none;
+      font-weight:100;
+
+      &:hover {
+        color: getColor(primaryColor);
+      }
+    }
+  }
+  .row2 {
+    display:flex;
+    justify-content:center;
+    font-size:3em;
+    a {
+      transition-duration:0.3s;
+      margin:0 5px;
+      color:#a1a1a1;
+      &:hover {
+        color: getColor(primaryColor);
+      }
+    }
+  }
+}
+
+
+// Company Page
+
+.company-part-1 {
+  width:98.6%;
+  height:600px;
+  @include BackgroundImage(resort2, 100%);
+  @include Flex();
+  padding: 10px;
+  .col1 {
+    width:50%;
+    height:100%;
+    background-color: rgba(26,26,26,0.5);
+    padding:20px;
+    @include Flex(center, flex-start, column);
+    h1, p {
+      color: white;
+    }
+    h1 {
+      font-size:4em;
+    }
+    p {
+      font-size:20px;
+      margin-bottom:10px;
     }
   }
 }

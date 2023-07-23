@@ -1,6 +1,15 @@
-@mixin ButtonStyle($primColor, $secondColor) {
+@mixin ChangeButtonColors($primColor, $secondColor) {
   background-color: $primColor;
   color: $secondColor;
+}
+
+@mixin ChangeButtonColorsAndBorder($primColor, $secondColor) {
+  @include ChangeButtonColors($primColor, $secondColor);
+  border-color: $secondColor;
+}
+
+@mixin ButtonStyle($primColor, $secondColor) {
+  @include ChangeButtonColors($primColor, $secondColor);
   padding:5px;
   border-radius:25px;
   border: 1px solid $secondColor;
@@ -11,4 +20,39 @@
   border-radius:25px;
   margin:5px;
   padding-bottom: 5px;
+}
+
+@mixin BackgroundImage($imageUrl, $size) {
+  background-image: url(getImage($imageUrl));
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+@mixin Flex($jc:flex-start, $ac:flex-start, $fd: row) {
+  display:flex;
+  justify-content: $jc;
+  align-items: $ac;
+  flex-direction: column;
+}
+
+@mixin Slide($imageUrl, $size, $side:flex-start) {
+  @include BackgroundImage($imageUrl, $size);
+  @include Flex($side);
+  .col1 {
+    width:50%;
+    height:100%;
+    background-color: rgba(26,26,26,0.5);
+    padding:20px;
+    @include Flex(center, flex-start, column);
+    h1, p {
+      color: white;
+    }
+    h1 {
+      font-size:4em;
+    }
+    p {
+      font-size:20px;
+      margin-bottom:10px;
+    }
+  }
 }

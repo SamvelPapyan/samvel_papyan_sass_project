@@ -5,3 +5,7 @@
 @function getFont($font) {
   @return map-get($fonts, $font);
 }
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}
