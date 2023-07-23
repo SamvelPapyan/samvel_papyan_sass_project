@@ -22,37 +22,59 @@
   padding-bottom: 5px;
 }
 
-@mixin BackgroundImage($imageUrl, $size) {
+@mixin BackgroundImage($imageUrl, $size, $position:center) {
   background-image: url(getImage($imageUrl));
   background-repeat: no-repeat;
   background-size: $size;
+  background-position: $position;
 }
 
 @mixin Flex($jc:flex-start, $ac:flex-start, $fd: row) {
   display:flex;
   justify-content: $jc;
   align-items: $ac;
-  flex-direction: column;
+  flex-direction: $fd;
 }
 
-@mixin Slide($imageUrl, $size, $side:flex-start) {
+@mixin Slide($imageUrl, $size, $swap:row) {
   @include BackgroundImage($imageUrl, $size);
-  @include Flex($side);
+  @include Flex(space-evenly, center, $swap);
+  background-position: center;
   .col1 {
     width:50%;
-    height:100%;
-    background-color: rgba(26,26,26,0.5);
+    height:80%;
+    background-color: rgba(26, 26, 26, 0.5);
+    border-radius: 25px;
     padding:20px;
-    @include Flex(center, flex-start, column);
-    h1, p {
-      color: white;
+    @if $swap == row-reverse {
+      @include Flex(center, flex-end, column);
+    }
+    @else if $swap == center{
+      @include Flex(center, center, column);
+    }
+    @else {
+      @include Flex(center, flex-start, column);
     }
     h1 {
+      color: getColor(primaryColor);
       font-size:4em;
     }
     p {
+      color: getColor(secondaryColor);
       font-size:20px;
       margin-bottom:10px;
     }
+    .actions {
+      @include Flex(space-evenly);
+      .primary-action {
+        @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
+      }
+      .secondary-action {
+        @include ButtonStyle(getColor(secondaryColor), getColor(primaryColor));
+      }
+    }
+  }
+  .col2 {
+    width:40%;
   }
 }

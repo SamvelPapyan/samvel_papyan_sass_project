@@ -38,6 +38,10 @@ button {
   position:sticky;
   top:0;
 
+  h1 a {
+    text-decoration: none;
+    color: getColor(secondaryColor);
+  }
   .menu-bar {
     display:flex;
     align-items:center;
@@ -305,26 +309,32 @@ button {
 // Company Page
 
 .company-part-1 {
-  width:98.6%;
+  width:100%;
   height:600px;
-  @include BackgroundImage(resort2, 100%);
-  @include Flex();
-  padding: 10px;
-  .col1 {
-    width:50%;
-    height:100%;
-    background-color: rgba(26,26,26,0.5);
-    padding:20px;
-    @include Flex(center, flex-start, column);
-    h1, p {
-      color: white;
-    }
-    h1 {
-      font-size:4em;
-    }
-    p {
-      font-size:20px;
-      margin-bottom:10px;
-    }
-  }
+  @include Slide(resort2, 100%);
+}
+
+.company-part-2 {
+  width:100%;
+  height:600px;
+  @include Slide(worldwide-traveling1, 100%, row-reverse);
+}
+
+.company-part-3 {
+  width:100%;
+  height:600px;
+  @include Slide(analysis1, 100%);
+}
+
+#careers {
+  text-align:center;
+  color:getColor(primaryColor);
+  padding-top:80px;
+}
+
+.company-part-4 {
+  width:100%;
+  height:600px;
+  @include Slide(our-team, 70%);
+  
 }
