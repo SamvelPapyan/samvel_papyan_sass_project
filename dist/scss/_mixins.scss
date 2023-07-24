@@ -66,6 +66,12 @@
     }
     .actions {
       @include Flex(space-evenly);
+      width:100%;
+      button {
+        font-size:20px;
+        text-transform: uppercase;
+        padding: 5px 10px;
+      }
       .primary-action {
         @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
       }

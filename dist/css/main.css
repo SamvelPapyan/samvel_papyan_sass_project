@@ -10638,6 +10638,12 @@ button {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: row;
+  width: 100%;
+}
+.company-part-1 .col1 .actions button {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 5px 10px;
 }
 .company-part-1 .col1 .actions .primary-action {
   background-color: #fa6866;
@@ -10695,6 +10701,12 @@ button {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: row;
+  width: 100%;
+}
+.company-part-2 .col1 .actions button {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 5px 10px;
 }
 .company-part-2 .col1 .actions .primary-action {
   background-color: #fa6866;
@@ -10752,6 +10764,12 @@ button {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: row;
+  width: 100%;
+}
+.company-part-3 .col1 .actions button {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 5px 10px;
 }
 .company-part-3 .col1 .actions .primary-action {
   background-color: #fa6866;
@@ -10787,7 +10805,7 @@ button {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: row;
+  flex-direction: center;
   background-position: center;
 }
 .company-part-4 .col1 {
@@ -10798,7 +10816,7 @@ button {
   padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 .company-part-4 .col1 h1 {
@@ -10815,6 +10833,12 @@ button {
   justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: row;
+  width: 100%;
+}
+.company-part-4 .col1 .actions button {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 5px 10px;
 }
 .company-part-4 .col1 .actions .primary-action {
   background-color: #fa6866;
@@ -10832,4 +10856,22 @@ button {
 }
 .company-part-4 .col2 {
   width: 40%;
+}
+
+.company-part-5 {
+  width: 100%;
+}
+.company-part-5 h1 {
+  color: #fa6866;
+  text-align: center;
+}
+.company-part-5 .benefits {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.company-part-5 .benefits__box {
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */

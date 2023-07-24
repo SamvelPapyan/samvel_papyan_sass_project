@@ -335,6 +335,20 @@ button {
 .company-part-4 {
   width:100%;
   height:600px;
-  @include Slide(our-team, 70%);
-  
+  @include Slide(our-team, 70%, center);
+}
+
+.company-part-5 {
+  width:100%;
+  h1 {
+    color: getColor(primaryColor);
+    text-align: center;
+  }
+  .benefits {
+    width:100%;
+    @include Flex(space-evenly);
+    &__box {
+      width: 300px;
+    }
+  }
 }
