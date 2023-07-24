@@ -76,15 +76,180 @@
           <div class="form-column">
             <div class="form-group">
               <label>First Name</label><br/>
-              <input type="text"/>
+              <input type="text" name="first-name"/>
               <label>Date of Birth</label><br/>
-              <input type="date"/>
+              <input type="date" name="date-of-birth"/>
             </div>
           </div>
           <div class="form-column">
             <div class="form-group">
               <label>Last Name</label><br/>
-              <input type="text"/>
+              <input type="text" name="last-name"/>
+            </div>
+            <div class="form-group">
+              <label>E-mail</label><br/>
+              <input type="email" name="email"/>
+            </div>
+          </div>
+        </div>
+        <h3>Address</h3>
+        <div class="form-row-col">
+          <label>Street Address</label>
+          <input type="text" name="street-address"/>
+        </div>
+        <div class="form-row-col">
+          <label>Street Address Line 2</label>
+          <input type="text" name="street-address-2"/>
+        </div>
+        <div class="form-row">
+          <div class="form-column">
+            <div class="form-group">
+              <div class="form-group">
+                <label>City</label><br/>
+                <input type="text" name="city"/>
+              </div>
+              <div class="form-group">
+                <label>Postal / Zip Code</label><br/>
+                <input type="text" name="zip-code"/>
+              </div>
+            </div>
+          </div>
+          <div class="form-column">
+            <div class="form-group">
+              <label>Province / State</label><br/>
+              <input type="text" name="state"/>
+            </div>
+            <div class="form-group">
+              <label>Country</label><br/>
+              <select name="country">
+                <option value="armenia">Armenia</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="mexico">Mexico</option>
+                <option value="uk">United Kingdom</option>
+                <option value="france">France</option>
+                <option value="spain">Spain</option>
+                <option value="italy">Italy</option>
+                <option value="greece">Greece</option>
+                <option value="germany">Germany</option>
+                <option value="norway">Norway</option>
+                <option value="sweden">Sweden</option>
+                <option value="russia">Russia</option>
+                <option value="china">China</option>
+                <option value="japan">Japan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button>Add other traveler</button>
+        <br/>
+        <hr/>
+        <h2>Travel Details</h2>
+        <div class="form-row-col">
+          <label>Travel Date</label>
+          <input type="date" name="trave-date">
+        </div>
+        <div class="form-row-col">
+          <label>Destination</label>
+          <input type="text" name="destination">
+        </div>
+        <div class="form-row-col">
+          <label>Realistic Budget $</label>
+          <input type="text" placeholder="$" name="realistic-budget">
+        </div>
+        <div class="form-row-col">
+          <label>Which airport would you like to leave from?</label>
+          <select name="airport">
+            <option value="">Please Select</option>
+            <option value="la-international">Los Anglees International</option>
+            <option value="orlando-international">Orlando International Airport</option>
+            <option value="newark-liberty-international">Newark Liberty International</option>
+            <option value="zvartnots">Zvartnots Airport</option>
+          </select>
+        </div>
+        <div class="form-row-col includes-switches">
+          <label>Type of Trip</label>
+          <div class="form-row">
+            <div class="form-column">
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Honeymoon</label>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Business</label>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Cruise</label>
+              </div>
+            </div>
+            <div class="form-column">
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Gateway</label>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Family Vacation</label>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Other</label>
+              </div>
+            </div>
+          </div>
+          <label>Other Service Needed</label>
+          <div class="form-row">
+            <div class="form-column">
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Flights Only</label>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Hotel / Resorts</label>
+              </div>
+            </div>
+            <div class="form-column">
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Rental Car</label>
+              </div>
+              <div class="switch-group">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <label>Entertainment</label>
+              </div>
             </div>
           </div>
         </div>
