@@ -105,9 +105,9 @@ button {
   width:100%;
   display: flex;
   flex-direction:column;
-  background-image: url(getImage(barcelona));
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include BackgroundImage(barcelona, cover);
+  background-position-x: center;
+  background-position-y: top;
   .row1 {
     height:300px;
     display:flex;
@@ -339,16 +339,98 @@ button {
 }
 
 .company-part-5 {
+  @include Flex(flex-start, center, column);
   width:100%;
   h1 {
     color: getColor(primaryColor);
     text-align: center;
   }
   .benefits {
+    width:70%;
+     @include Flex(space-evenly);
+     flex-wrap:wrap;
+     &__box {
+       @include Flex(flex-start, center, column);
+       width: 25%;
+       border-radius:25px;
+       margin:5px;
+       padding:10px;
+       background-color:getColor(secondaryColor);
+
+       img {
+         width:25%;
+         height:100px;
+         border-radius: 25px 25px 0 0;
+       }
+       h1 {
+         font-size:25px;
+       }
+       p{
+         text-align: center;
+         font-size:20px;
+       }
+     }
+  }
+  .see-all-benefits {
     width:100%;
-    @include Flex(space-evenly);
-    &__box {
-      width: 300px;
+    height:64px;
+    @include Flex(center, center);
+    button {
+      @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
+      &:hover {
+        @include ButtonStyle(getColor(secondaryColor), getColor(primaryColor));
+      }
+      font-size:25px;
+      text-transform: uppercase;
+      width:300px;
+    }
+  }
+}
+
+//Products Page
+
+.booking-container {
+  @include Flex(flex-start, center, column);
+  width:100%;
+  h1 {
+    color:getColor(primaryColor);
+    font-size: 3em;
+    padding-bottom:10px;
+  }
+  form {
+    @include Flex(flex-start, center, column);
+    width:90%;
+    border: 1px solid getColor(primaryColor);
+    padding:20px;
+    border-radius:25px;
+    h2 {
+      color:getColor(primaryColor);
+      font-size: 2em;
+      padding-bottom:10px;
+    }
+    .form-row {
+      @include Flex(space-evenly, flex-start, row);
+      width:100%;
+      .form-column {
+        @include Flex(flex-start, flex-start, column);
+        width:45%;
+        padding:20px;
+        .form-group {
+          width:100%;
+          label {
+            color:getColor(primaryColor);
+          }
+          input {
+            width:100%;
+            border: 1px solid getColor(primaryColor);
+            border-radius:10px;
+            height:40px;
+            font-size:20px;
+            color:getColor(primaryColor);
+            padding:0 8px;
+          }
+        }
+      }
     }
   }
 }
