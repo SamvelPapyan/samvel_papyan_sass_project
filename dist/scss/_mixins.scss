@@ -144,3 +144,24 @@
     @include Flex(flex-start);
   }
 }
+
+@mixin LinksInButtons($color1, $color2) {
+  a {
+    text-decoration:none;
+    color: $color1;
+  }
+  &:hover {
+    a {
+      color: $color2;
+    }
+  }
+}
+
+@mixin SlideHeading {
+  h2 {
+    text-align:center;
+    color: getColor(primaryColor);
+    font-size:3em;
+    text-transform: uppercase;
+  }
+}

@@ -29,6 +29,7 @@ button {
 }
 
 .navbar {
+  z-index:100;
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -101,6 +102,7 @@ button {
   }
 }
 
+// Homepage
 .part-1{
   width:100%;
   display: flex;
@@ -135,6 +137,7 @@ button {
 
       .book-button {
         @include ButtonStyle(transparent, getColor(secondaryColor));
+        @include LinksInButtons(getColor(secondaryColor), getColor(primaryColor));
         font-size: 1.5em;
         padding:0 20px;
         &:hover{
@@ -180,10 +183,8 @@ button {
 }
 
 .part-2{
+  @include SlideHeading;
   padding-top:80px;
-  h2 {
-    text-align:center;
-  }
   .hotels {
     margin:auto;
     display:flex;
@@ -228,10 +229,8 @@ button {
 }
 
 .bonus-part-1{
+  @include SlideHeading;
   padding-top:80px;
-  h2 {
-    text-align:center;
-  }
   .sales {
     margin:auto;
     display:flex;
@@ -251,6 +250,12 @@ button {
         width:100%;
         height:200px;
         border-radius: 25px 25px 0 0;
+      }
+      h3 {
+        color: getColor(primaryColor);
+      }
+      .sale-description {
+        color: #1a1a1a;
       }
       .claim-button {
         @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
@@ -399,7 +404,7 @@ button {
   }
   form {
     @include Flex(flex-start, center, column);
-    width:90%;
+    width:70%;
     border: 1px solid getColor(primaryColor);
     padding:20px;
     border-radius:25px;
@@ -428,6 +433,13 @@ button {
       @include Flex(flex-start, flex-start, column);
       width:94%;
     }
+    p {
+      color:getColor(primaryColor);
+    }
+    .align-right {
+      @include Flex(flex-end);
+      width:100%;
+    }
     label {
       color:getColor(primaryColor);
     }
@@ -443,6 +455,12 @@ button {
     select {
       width:103%;
     }
+    input[type=number] {
+      width:100px;
+    }
+    input[type=radio] {
+      width: 20px;
+    }
     button {
       @include ButtonStyle(getColor(secondaryColor), getColor(primaryColor));
       font-size:1.5em;
@@ -457,6 +475,44 @@ button {
     }
     .includes-switches {
       @include IncludesToggleSwitches;
+    }
+    .retainer-fee {
+      margin-top:10px;
+      @include Flex;
+      width: 100%;
+      .fee-content {
+        @include Flex;
+        margin-left:20px;
+        width: 90%;
+        img {
+          width: 100px;
+          margin-right:10px;
+        }
+      }
+      .content-row {
+        @include Flex(space-between);
+        width:90%;
+        .content-col1 {
+          width:85%;
+        }
+        .content-col2 {
+          width:15%;
+        }
+      }
+    }
+    .terms-and-conditions {
+      padding: 0 20px;
+      h2 {
+        text-align: center;
+      }
+      ul {
+        margin-left:20px;
+      }
+    }
+    #signature {
+      border: 1px solid getColor(primaryColor);
+      width:100%;
+      height:100px;
     }
   }
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Book a trip - TravelBooX</title>
   <link rel="stylesheet" href="css/main.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
@@ -253,6 +253,71 @@
             </div>
           </div>
         </div>
+        <div class="form-row-col">
+          <label>Agent Retainer Fee</label>
+          <div class="retainer-fee">
+            <input type="radio" name="retainer-fee" checked/>
+            <div class="fee-content">
+              <img src="images/booking1.avif" alt="booking">
+              <div class="content-row">
+                <div class="content-col1">
+                  <h2>Booking Agent Retainer Fee</h2>
+                  <label>Quantity</label>
+                  <input type="number" min="1" max="5" value="1" name="fee-quantity"/>
+                </div>
+                <div class="content-col2">
+                  <h3>$100.00</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="align-right">
+            <p>Item subtotal: $100.00</p>
+          </div>
+          <div class="align-right">
+            <h3>Total: $100.00</h3>
+          </div>
+        </div>
+        <div class="form-row-col">
+          <label>Credit Card</label>
+          <div class="terms-and-conditions">
+            <h2>Terms and Conditions</h2>
+            <p>The non-refundable retainer fee is good for ONLY 48 hours after itinerary has been sent.</p>
+            <p>The non-refundable retainer fee includes:</p>
+            <ul>
+              <li>2 itinerary and package searches to find the best quote that is within your budget;</li>
+              <li>pre-trip travel tips and advisories;</li>
+              <li>email/phone assistance during your travel;</li>
+              <li>post-trip follow-up.  </li>
+            </ul>
+            <p>Its not just about finding you a great deal but its about creating you a memorable travel experience that leaves you satisfied, but also eager to travel more. I take pride in my work and the happiness and satisfaction of my travelers is of the utmost importance to me.</p>
+            <br>
+            <p>By signing this form, you have authorized X Travel to charge and store your credit card for Non-refundable agent fee. </p>
+          </div>
+          <div class="form-row">
+            <div class="form-column">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" name="credit-first-name">
+              </div>
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" name="credit-date">
+              </div>
+            </div>
+            <div class="form-column">
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" name="credit-last-name">
+              </div>
+              <div class="form-group">
+                <label>Signature</label>
+                <canvas id="signature"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="submit">Submit</button>
       </form>
     </div>
     <div class="footer">

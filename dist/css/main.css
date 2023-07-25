@@ -10299,6 +10299,7 @@ button {
 }
 
 .navbar {
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10415,6 +10416,13 @@ button {
   font-size: 1.5em;
   padding: 0 20px;
 }
+.part-1 .row1 .col1 .book-button a {
+  text-decoration: none;
+  color: white;
+}
+.part-1 .row1 .col1 .book-button:hover a {
+  color: #fa6866;
+}
 .part-1 .row1 .col1 .book-button:hover {
   background-color: white;
   color: #fa6866;
@@ -10459,6 +10467,9 @@ button {
 }
 .part-2 h2 {
   text-align: center;
+  color: #fa6866;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 .part-2 .hotels {
   margin: auto;
@@ -10520,6 +10531,9 @@ button {
 }
 .bonus-part-1 h2 {
   text-align: center;
+  color: #fa6866;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 .bonus-part-1 .sales {
   margin: auto;
@@ -10543,6 +10557,12 @@ button {
   width: 100%;
   height: 200px;
   border-radius: 25px 25px 0 0;
+}
+.bonus-part-1 .sales .sales__sale-box h3 {
+  color: #fa6866;
+}
+.bonus-part-1 .sales .sales__sale-box .sale-description {
+  color: #1a1a1a;
 }
 .bonus-part-1 .sales .sales__sale-box .claim-button {
   background-color: #fa6866;
@@ -10946,7 +10966,7 @@ button {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  width: 90%;
+  width: 70%;
   border: 1px solid #fa6866;
   padding: 20px;
   border-radius: 25px;
@@ -10985,6 +11005,16 @@ button {
   flex-direction: column;
   width: 94%;
 }
+.booking-container form p {
+  color: #fa6866;
+}
+.booking-container form .align-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
 .booking-container form label {
   color: #fa6866;
 }
@@ -10999,6 +11029,12 @@ button {
 }
 .booking-container form select {
   width: 103%;
+}
+.booking-container form input[type=number] {
+  width: 100px;
+}
+.booking-container form input[type=radio] {
+  width: 20px;
 }
 .booking-container form button {
   background-color: white;
@@ -11075,4 +11111,51 @@ button {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
+}
+.booking-container form .retainer-fee {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+.booking-container form .retainer-fee .fee-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-left: 20px;
+  width: 90%;
+}
+.booking-container form .retainer-fee .fee-content img {
+  width: 100px;
+  margin-right: 10px;
+}
+.booking-container form .retainer-fee .content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 90%;
+}
+.booking-container form .retainer-fee .content-row .content-col1 {
+  width: 85%;
+}
+.booking-container form .retainer-fee .content-row .content-col2 {
+  width: 15%;
+}
+.booking-container form .terms-and-conditions {
+  padding: 0 20px;
+}
+.booking-container form .terms-and-conditions h2 {
+  text-align: center;
+}
+.booking-container form .terms-and-conditions ul {
+  margin-left: 20px;
+}
+.booking-container form #signature {
+  border: 1px solid #fa6866;
+  width: 100%;
+  height: 100px;
 }/*# sourceMappingURL=main.css.map */
