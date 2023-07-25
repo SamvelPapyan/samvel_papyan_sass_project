@@ -10303,6 +10303,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   background-color: #fa6866;
   height: 80px;
   padding: 0 20px 0 20px;
@@ -10315,7 +10316,9 @@ button {
 }
 .navbar .menu-bar {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: row;
 }
 .navbar .menu-bar ul {
   list-style-type: none;
@@ -10392,9 +10395,9 @@ button {
 .part-1 .row1 .col1 {
   width: 50%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  flex-direction: column;
 }
 .part-1 .row1 .col1 h1, .part-1 .row1 .col1 p {
   font-family: "Rowdies";
@@ -10433,7 +10436,6 @@ button {
 }
 .part-1 .row2 {
   width: 100%;
-  padding: 0 20px 0 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -10472,9 +10474,10 @@ button {
   text-transform: uppercase;
 }
 .part-2 .hotels {
-  margin: auto;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 .part-2 .hotels__hotel-box {
@@ -10536,18 +10539,19 @@ button {
   text-transform: uppercase;
 }
 .bonus-part-1 .sales {
-  margin: auto;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 .bonus-part-1 .sales .sales__sale-box {
   width: 300px;
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border: 1px solid #fa6866;
   border-radius: 25px;
   margin: 5px;
@@ -10593,6 +10597,8 @@ button {
 .footer .row1 {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
 }
 .footer .row1 h3 {
   color: #fa6866;
@@ -10612,6 +10618,8 @@ button {
 .footer .row2 {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
   font-size: 3em;
 }
 .footer .row2 a {
@@ -10675,12 +10683,26 @@ button {
   border-radius: 25px;
   border: 1px solid white;
 }
+.company-part-1 .col1 .actions .primary-action:hover {
+  background-color: white;
+  color: #fa6866;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid #fa6866;
+}
 .company-part-1 .col1 .actions .secondary-action {
   background-color: white;
   color: #fa6866;
   padding: 5px;
   border-radius: 25px;
   border: 1px solid #fa6866;
+}
+.company-part-1 .col1 .actions .secondary-action:hover {
+  background-color: #fa6866;
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
 }
 .company-part-1 .col2 {
   width: 40%;
@@ -10738,12 +10760,26 @@ button {
   border-radius: 25px;
   border: 1px solid white;
 }
+.company-part-2 .col1 .actions .primary-action:hover {
+  background-color: white;
+  color: #fa6866;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid #fa6866;
+}
 .company-part-2 .col1 .actions .secondary-action {
   background-color: white;
   color: #fa6866;
   padding: 5px;
   border-radius: 25px;
   border: 1px solid #fa6866;
+}
+.company-part-2 .col1 .actions .secondary-action:hover {
+  background-color: #fa6866;
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
 }
 .company-part-2 .col2 {
   width: 40%;
@@ -10801,12 +10837,26 @@ button {
   border-radius: 25px;
   border: 1px solid white;
 }
+.company-part-3 .col1 .actions .primary-action:hover {
+  background-color: white;
+  color: #fa6866;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid #fa6866;
+}
 .company-part-3 .col1 .actions .secondary-action {
   background-color: white;
   color: #fa6866;
   padding: 5px;
   border-radius: 25px;
   border: 1px solid #fa6866;
+}
+.company-part-3 .col1 .actions .secondary-action:hover {
+  background-color: #fa6866;
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
 }
 .company-part-3 .col2 {
   width: 40%;
@@ -10870,12 +10920,26 @@ button {
   border-radius: 25px;
   border: 1px solid white;
 }
+.company-part-4 .col1 .actions .primary-action:hover {
+  background-color: white;
+  color: #fa6866;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid #fa6866;
+}
 .company-part-4 .col1 .actions .secondary-action {
   background-color: white;
   color: #fa6866;
   padding: 5px;
   border-radius: 25px;
   border: 1px solid #fa6866;
+}
+.company-part-4 .col1 .actions .secondary-action:hover {
+  background-color: #fa6866;
+  color: white;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid white;
 }
 .company-part-4 .col2 {
   width: 40%;

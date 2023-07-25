@@ -74,9 +74,15 @@
       }
       .primary-action {
         @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
+        &:hover {
+          @include ButtonStyle(getColor(secondaryColor), getColor(primaryColor));
+        }
       }
       .secondary-action {
         @include ButtonStyle(getColor(secondaryColor), getColor(primaryColor));
+        &:hover {
+          @include ButtonStyle(getColor(primaryColor), getColor(secondaryColor));
+        }
       }
     }
   }
@@ -164,4 +170,8 @@
     font-size:3em;
     text-transform: uppercase;
   }
+}
+
+@mixin HomePageSlideStyle($color1, $color2) {
+
 }
